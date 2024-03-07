@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado do Empréstimo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resultado.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon2.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon2.png') }}" type="image/png">
+</head>
+<body>
+    <div class="result-box">
+        <h1>Resultado do Empréstimo</h1>
+        <p>{{ resultado }}</p>
+        {% if valor_total %}
+            <p>Valor Total a Pagar: R$ {{ valor_total }}</p>
+            <p>Valor da Parcela (A partir do quinto dia útil do próximo mês): R$ {{ valor_parcela }}</p>
+        {% endif %}
+        <a href="/" class="result-button">Voltar</a>
+        <style>
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007bff; /* Azul */
+                color: white;
+                border: none;
+                cursor: pointer;
+                margin: 5px;
+            }
+        
+            button:hover {
+                background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+            }
+        </style>
+        
+        <form action="/confirmar-emprestimo" method="post">
+            <p>Deseja confirmar esse empréstimo?</p>
+            <button type="submit" name="confirmar" value="sim">NÃO</button>
+            <button type="submit" name="confirmar" value="nao">SIM</button>
+        </form>
+        
+        
+    </div>
+</body>
+</html>

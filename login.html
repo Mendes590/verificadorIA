@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon2.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon2.png') }}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 style="margin-left: 20px;">TESTES IA</h1>
+        <div>
+            <a class="header-link" href="https://www.linkedin.com/in/matheus-mendes-7168a4267/" target="_blank">Contato</a>
+            <a class="header-link" href="https://pipeline.capital/pt/" target="_blank">PIPELINE</a>
+        </div>
+    </header>
+    <div class="container">
+        <h1>IA VERIFICADORA DE EMPRÉSTIMO</h1>
+        <p>Por favor, faça login para continuar.</p>
+        <div class="form-container">
+            <form method="post" action="/index">
+                <input type="text" name="username" placeholder="Nome de Usuário" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <input type="submit" value="Verificar">
+            </form>
+        </div>
+        <div class="links">
+            <a class="link" href="https://www.linkedin.com/in/matheus-mendes-7168a4267/" target="_blank">Contato</a>
+            <a class="link" href="mailto:matheus.machado@pipeline.capital" target="_blank">Ajuda</a>
+        </div>
+    </div>
+</body>
+</html>
