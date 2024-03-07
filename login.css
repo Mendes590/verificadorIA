@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url('teste5.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('teste5.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+/* Estilos para o cabeçalho */
+/* Estilos para o cabeçalho */
+header {
+    background-color: #faebd7; /* Cor de fundo azul */
+    color: #feffff; /* Cor do texto branco */
+    padding: 5px 10%; /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-link {
+    background-color: #fff; /* Cor de fundo branco */
+    color: #007bff; /* Cor do texto azul */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    text-decoration: none; /* Remover sublinhado do link */
+    font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+    margin-left: 30px; /* Espaçamento entre os botões */
+}
+
+.header-link:hover {
+    background-color: #f0f0f0; /* Cor de fundo cinza claro ao passar o mouse */
+}
+
+
+/* Estilos mantidos */
+
+
+.container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    background-color: #faebd7;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #000000;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #555;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    margin: 0 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-container input {
+    display: block;
+    width: 30%;
+    margin-bottom: 10px;
+    margin-left: 285px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    margin-top: 20px;
+    width: 20%;
+    margin-left: 320px;
+}
