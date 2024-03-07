@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificador de Empréstimo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon2.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon2.png') }}" type="image/png">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 99vh;
+            margin: 0;
+        }
+
+        .error-message {
+            font-size: 20px;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 1px 2px;
+            border-radius: 5px;
+            position: absolute;
+            right: 0;
+            margin-right: 500px; /* Adiciona um espaço à direita da mensagem */
+            white-space: nowrap;
+        }
+        
+        
+
+        input[type="submit"] {
+            padding: 10px 20px; /* Adiciona espaço interno ao redor do texto */
+            font-size: 20px; /* Tamanho da fonte */
+            border: 2px solid #ffffff; /* Borda sólida com cor branca */
+            background-color: #3fa8f9; /* Cor de fundo azul */
+            color: #ffffff; /* Cor do texto branca */
+            border-radius: 5px; /* Borda arredondada */
+            cursor: pointer; /* Mostra a mão ao passar o mouse sobre o botão */
+            /* Adicione outras propriedades de estilo conforme necessário */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Cor de fundo azul mais escura ao passar o mouse */
+        }
+
+        /* Estilos para centralizar a caixa de seleção e o texto */
+        .parcelas-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px; /* Espaçamento acima da caixa */
+        }
+
+        /* Estilos para a caixa de seleção */
+        #parcelas {
+            margin-left: 10px; /* Espaçamento à esquerda */
+            margin-right: 10px; /* Espaçamento à direita */
+        }
+    </style>
+</head>
+<body>
+    
+    
+    {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}
+    <form action="/resultado" method="post">
+        <!-- Seus campos de formulário aqui -->
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="NOME"><br><br>
+        <label for="idade">Idade:</label><br>
+        <input type="text" id="idade" name="IDADE"><br><br>
+        <label for="empregado">Empregado a quantos anos:</label><br>
+        <input type="text" id="empregado" name="EMPREGADO A QUANTOS ANOS"><br><br>
+        <label for="profissao">Profissão:</label><br>
+        <input type="text" id="profissao" name="PROFISSÃO"><br><br>
+        <label for="salario">Salário:</label><br>
+        <input type="text" id="salario" name="SALÁRIO"><br><br>
+        <label for="estado_civil">Estado Civil:</label><br>
+        <input type="text" id="estado_civil" name="ESTADO CIVIL"><br><br>
+        <label for="filhos">Tem filhos:</label><br>
+        <input type="text" id="filhos" name="TEM FILHOS"><br><br>
+        <label for="patrimonio">Patrimônio:</label><br>
+        <input type="text" id="patrimonio" name="PATRIMÔNIO"><br><br>
+        <label for="nome_limpo">Nome Limpo:</label><br>
+        <input type="text" id="nome_limpo" name="NOME LIMPO"><br><br>
+        <label for="emprestimo">Valor do Empréstimo:</label><br>
+        <input type="text" id="emprestimo" name="VALOR EMPRÉSTIMO"><br><br>
+        <div class="input-group">
+            <label for="parcelas">Número de Parcelas:</label>
+            <div class="parcelas-container">
+                <select id="parcelas" name="parcelas">
+                    <option value="1">1x (5% ao Mês)</option>
+                    <option value="2">2x (5% ao Mês)</option>
+                    <option value="3">3x (5% ao Mês)</option>
+                    <option value="4">4x (5% ao Mês)</option>
+                    <option value="5">5x (5% ao Mês)</option>
+                    <option value="6">6x (5% ao Mês)</option>
+                    <option value="7">7x (5% ao Mês)</option>
+                    <option value="8">8x (5% ao Mês)</option>
+                    <option value="9">9x (5% ao Mês)</option>
+                    <option value="10">10x (5% ao Mês)</option>
+                </select>
+            </div>
+       
+        </div>
+        
+        
+        <input type="submit" value="VERIFICAR">
+        
+    </form>
+</body>
+</html>
